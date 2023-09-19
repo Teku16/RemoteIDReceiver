@@ -1,4 +1,5 @@
 import asyncio
+import pycurl
 
 from fastapi import WebSocket
 
@@ -29,6 +30,7 @@ class ConnectionManager:
         """
         from api import to_drone_dto
         msg = to_drone_dto(remote_id).dict()
+        print(msg)
         self._message_queue.put_nowait(msg)
 
     async def handle_next_message(self) -> bool:
