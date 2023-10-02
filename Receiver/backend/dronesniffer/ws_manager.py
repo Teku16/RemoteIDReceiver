@@ -1,5 +1,5 @@
 import asyncio
-import pycurl
+#import pycurl
 
 from fastapi import WebSocket
 
